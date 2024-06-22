@@ -5,9 +5,16 @@ from .forms import StudentForm
 def index(request):
     return render(request, 'students/index.html')
 
-def student_list(request):
+from django.shortcuts import render, get_object_or_404
+from .models import Student
+
+def student_list(request, pk=None):
     students = Student.objects.all()
-    return render(request, 'students/student_list.html', {'students': students})
+    student = None
+    if pk:
+        student = get_object_or_404(Student, pk=pk)
+    return render(request, 'students/student_list.html', {'students': students, 'student': student})
+
 
 def student_detail(request, pk):
     student = get_object_or_404(Student, pk=pk)
