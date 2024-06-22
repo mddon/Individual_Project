@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Student Management</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Student Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'student_list' %}">Student List</a></li>
+            <li><a href="{% url 'student_create' %}">Add New Student</a></li>
+            <li><a href="{% url 'admin:index' %}">Admin</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>This is the home page for the Student Management System. Use the navigation links above to manage student records.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Student Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>
