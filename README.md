@@ -1,0 +1,1 @@
+This Repository contains Student Records management using CRUD operation on Django server
